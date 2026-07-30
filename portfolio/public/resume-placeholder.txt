@@ -1,0 +1,2 @@
+Replace this file with your real résumé at public/resume.pdf
+(same filename, so no code changes are needed).

@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "title": "Yohan Briceño Godoy — Software Engineer",
+    "description": "Software engineering student and backend-leaning full-stack developer building reliable, cloud-ready systems.",
+    "ogAlt": "Yohan Briceño Godoy portfolio preview"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "status": "Open to opportunities",
+    "title": "Software Engineering Student & Full-Stack Developer",
+    "kicker": "Building toward backend & cloud",
+    "intro": "I build financial-grade software by day and study systems, distributed architecture, and cloud infrastructure by night. I care more about how software fails than how it demos.",
+    "ctaResume": "Download résumé",
+    "ctaGithub": "GitHub",
+    "ctaLinkedin": "LinkedIn",
+    "ctaContact": "Get in touch",
+    "uptimeLabel": "days writing production code",
+    "stackLabel": "current stack"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "How I approach engineering",
+    "paragraph1": "I'm a software engineering student currently working as a Software Development Intern at Banco Central de Costa Rica, where I help migrate legacy financial systems that process information for more than 80 regulated institutions. That work sits at the intersection of correctness and scale — there's very little room for a query that's 'probably fine.'",
+    "paragraph2": "What drives me is curiosity paired with an engineering mindset: I want to understand why a system behaves the way it does, not just make it pass tests. I'm comfortable across the stack — from React interfaces to ASP.NET services to the SQL Server queries underneath — but I'm especially drawn to backend development and cloud technologies, where the hardest and most interesting problems tend to live.",
+    "paragraph3": "I treat AI-assisted development as a tool that raises the bar on review, not a shortcut around it: every generated line still has to earn its place through validation, testing, and quality gates like SonarQube. Long term, I'm aiming toward the intersection of technical impact, market demand, and durable growth — and right now that points toward backend, cloud, and full-stack engineering.",
+    "highlightsTitle": "What I bring",
+    "highlight1": "Engineering mindset over quick fixes",
+    "highlight2": "Comfortable across frontend, backend, and databases",
+    "highlight3": "Continuous learner, especially in cloud & systems design",
+    "highlight4": "Quality-first: code review, SonarQube, testing"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I've worked",
+    "present": "Present",
+    "bcr": {
+      "role": "Software Development Intern – Financial Information Systems",
+      "summary": "Orchestrates AI agent-assisted system migrations within an Agile SDLC, reviewing and validating AI-generated outputs for accuracy, performance, and maintainability before integration testing and QA release.",
+      "bullet1": "Reviews and validates C# code in financial systems processing high-volume data from 80+ banking and financial institutions, identifying SQL Server bottlenecks and improving query performance by up to 10%.",
+      "bullet2": "Enforces code quality standards using SonarQube while actively participating in peer code reviews and knowledge sharing within a multidisciplinary SAFe Agile team.",
+      "bullet3": "Supported system migrations using AI-assisted workflows, ensuring rigorous validation and testing before production release to maintain accuracy in mission-critical operations.",
+      "bullet4": "Diagnosed architectural issues and documented solutions for legacy financial systems, contributing to technical knowledge base and process improvements."
+    }
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Selected work",
+    "viewProject": "View project",
+    "viewGithub": "View source",
+    "viewDemo": "Live demo",
+    "demoUnavailable": "Demo coming soon",
+    "stackLabel": "Stack",
+    "backToProjects": "Back to projects",
+    "overview": "Overview",
+    "features": "Features",
+    "challenges": "Challenges",
+    "architecture": "Architecture",
+    "screenshots": "Screenshots",
+    "screenshotPlaceholder": "Screenshot placeholder",
+    "ecommercePlatform": {
+      "name": "E-Commerce Platform",
+      "tagline": "A multi-role storefront built to handle real catalog and order complexity.",
+      "overview": "A full-stack e-commerce platform covering product catalog management, cart and checkout, order tracking, and an admin dashboard. Built to explore how a TypeScript backend and an Angular frontend stay in sync as a data model grows past a simple CRUD shape.",
+      "feature1": "Role-based access for customers, sellers, and administrators",
+      "feature2": "Product catalog with variants, categories, and search/filtering",
+      "feature3": "Cart and checkout flow with order status tracking",
+      "feature4": "Admin dashboard for inventory and order management",
+      "challenge1": "Modeling product variants (size, color, stock) without duplicating catalog logic across services",
+      "challenge2": "Keeping cart state consistent between client-side Angular state and the source of truth in MySQL",
+      "challenge3": "Designing indexes that kept catalog search fast as the product count grew",
+      "architectureDescription": "A Node.js/TypeScript REST API backed by MySQL, consumed by an Angular single-page frontend. Business logic is split into service layers so validation and persistence rules aren't duplicated between the catalog, cart, and order modules."
+    },
+    "cruiseReservationSystem": {
+      "name": "Cruise Reservation System",
+      "tagline": "A reservation platform for managing cruise bookings end to end.",
+      "overview": "A reservation system for booking cruise cabins, managing itineraries, and handling passenger and payment records, built on ASP.NET and SQL Server as a deeper dive into transactional backend design.",
+      "feature1": "Cabin availability and booking flow with conflict prevention",
+      "feature2": "Itinerary and sailing schedule management",
+      "feature3": "Passenger records and booking history",
+      "feature4": "Payment and reservation status tracking",
+      "challenge1": "Preventing double-booking of cabins under concurrent requests",
+      "challenge2": "Designing a schema that cleanly separates itineraries, sailings, and individual bookings",
+      "challenge3": "Keeping reservation state transitions (pending, confirmed, cancelled) consistent and auditable",
+      "architectureDescription": "An ASP.NET Web API following a layered architecture (controllers, services, repositories) on top of SQL Server, with transactions guarding booking-critical operations against race conditions."
+    }
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Toolbox",
+    "learning": "Learning",
+    "categories": {
+      "languages": "Programming Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "tools": "Tools",
+      "methodologies": "Methodologies"
+    }
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Education",
+    "expectedGraduation": "Expected graduation",
+    "degree": {
+      "name": "Bachelor's Degree in Software Engineering"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk",
+    "description": "Whether it's an opportunity, a question about a project, or just to connect — I read every message.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me a bit about the opportunity or question.",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "success": "Message sent — thanks for reaching out. I'll reply soon.",
+    "error": "Something went wrong. Please try again or email me directly.",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Enter a valid email address.",
+    "directEmail": "Or email me directly at"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Designed and built by Yohan Briceño Godoy."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or was moved.",
+    "cta": "Back to home"
+  },
+  "languages": {
+    "spanish": "Spanish",
+    "english": "English",
+    "native": "Native",
+    "advanced": "Advanced (B2+)"
+  },
+  "themeToggle": {
+    "light": "Switch to light mode",
+    "dark": "Switch to dark mode"
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  }
+}

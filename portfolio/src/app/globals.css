@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Mode */
+
+  --canvas: 248 247 244;
+  --surface: 255 255 255;
+  --surface-raised: 247 245 241;
+
+  --border: 220 217 211;
+
+  --ink: 28 28 28;
+  --ink-muted: 104 104 104;
+
+  /* Sage Green */
+  --signal: 124 154 122;
+
+  /* Warm Brown */
+  --amber: 139 107 74;
+}
+
+.dark {
+  /* Fondo negro cálido */
+  --canvas: 15 15 15;
+
+  /* Tarjetas */
+  --surface: 25 25 25;
+
+  /* Cards elevadas */
+  --surface-raised: 34 34 34;
+
+  /* Bordes */
+  --border: 58 58 58;
+
+  /* Texto */
+  --ink: 245 245 245;
+
+  --ink-muted: 170 170 170;
+
+  /* Verde Sage */
+  --signal: 124 154 122;
+
+  /* Café */
+  --amber: 160 126 91;
+}

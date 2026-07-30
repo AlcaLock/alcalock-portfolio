@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "title": "Yohan Briceño Godoy — Ingeniero de Software",
+    "description": "Estudiante de ingeniería en software y desarrollador full-stack con enfoque backend, construyendo sistemas confiables y listos para la nube.",
+    "ogAlt": "Vista previa del portafolio de Yohan Briceño Godoy"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "education": "Educación",
+    "contact": "Contacto",
+    "resume": "Currículum"
+  },
+  "hero": {
+    "status": "Disponible para oportunidades",
+    "title": "Estudiante de Ingeniería en Software & Desarrollador Full-Stack",
+    "kicker": "Enfocado en backend y nube",
+    "intro": "Construyo software de nivel financiero de día y estudio sistemas, arquitectura distribuida e infraestructura en la nube de noche. Me importa más cómo falla el software que cómo se ve en una demo.",
+    "ctaResume": "Descargar currículum",
+    "ctaGithub": "GitHub",
+    "ctaLinkedin": "LinkedIn",
+    "ctaContact": "Contactarme",
+    "uptimeLabel": "días escribiendo código en producción",
+    "stackLabel": "stack actual"
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "title": "Cómo enfoco la ingeniería",
+    "paragraph1": "Soy estudiante de ingeniería en software y actualmente trabajo como Practicante de Desarrollo de Software en el Banco Central de Costa Rica, donde ayudo a migrar sistemas financieros heredados que procesan información de más de 80 entidades bancarias y reguladas. Ese trabajo vive en la intersección entre corrección y escala: hay muy poco espacio para una consulta que sea 'probablemente correcta'.",
+    "paragraph2": "Lo que me impulsa es la curiosidad junto con una mentalidad de ingeniería: quiero entender por qué un sistema se comporta de cierta forma, no solo hacer que pase las pruebas. Me siento cómodo en todo el stack — desde interfaces en React hasta servicios en ASP.NET y las consultas SQL Server detrás de ellos — pero me atraen especialmente el desarrollo backend y las tecnologías en la nube, donde suelen vivir los problemas más difíciles e interesantes.",
+    "paragraph3": "Trato el desarrollo asistido por IA como una herramienta que eleva el nivel de revisión, no como un atajo: cada línea generada debe ganarse su lugar mediante validación, pruebas y controles de calidad como SonarQube. A largo plazo, mi meta es ubicarme donde converjan el impacto técnico, la demanda del mercado y el crecimiento sostenido — y hoy eso apunta hacia backend, nube e ingeniería full-stack.",
+    "highlightsTitle": "Lo que aporto",
+    "highlight1": "Mentalidad de ingeniería por encima de soluciones rápidas",
+    "highlight2": "Cómodo entre frontend, backend y bases de datos",
+    "highlight3": "Aprendizaje continuo, especialmente en nube y diseño de sistemas",
+    "highlight4": "Calidad primero: revisión de código, SonarQube, pruebas"
+  },
+  "experience": {
+    "eyebrow": "Experiencia",
+    "title": "Dónde he trabajado",
+    "present": "Actualidad",
+    "bcr": {
+      "role": "Practicante de Desarrollo de Software – Sistemas de Información Financiera",
+      "summary": "Orquesta migraciones de sistemas asistidas por agentes de IA dentro de un SDLC Ágil, revisando y validando resultados generados por IA en términos de precisión, rendimiento y mantenibilidad antes de pruebas de integración y release a QA.",
+      "bullet1": "Revisa y valida código C# en sistemas financieros que procesan datos de alto volumen de 80+ instituciones bancarias y financieras, identificando cuellos de botella en SQL Server y mejorando el rendimiento de consultas en hasta un 10%.",
+      "bullet2": "Garantiza estándares de calidad usando SonarQube mientras participa activamente en revisiones de código entre pares y sesiones de conocimiento dentro de un equipo SAFe multidisciplinario.",
+      "bullet3": "Apoyó migraciones de sistemas usando flujos asistidos por IA, asegurando validación rigurosa y pruebas exhaustivas antes del release a producción en operaciones críticas.",
+      "bullet4": "Diagnosticó problemas arquitectónicos y documentó soluciones en sistemas financieros heredados, contribuyendo a la base de conocimiento técnico y mejora continua de procesos."
+    }
+  },
+  "projects": {
+    "eyebrow": "Proyectos",
+    "title": "Trabajo seleccionado",
+    "viewProject": "Ver proyecto",
+    "viewGithub": "Ver código",
+    "viewDemo": "Demo en vivo",
+    "demoUnavailable": "Demo próximamente",
+    "stackLabel": "Stack",
+    "backToProjects": "Volver a proyectos",
+    "overview": "Resumen",
+    "features": "Características",
+    "challenges": "Retos",
+    "architecture": "Arquitectura",
+    "screenshots": "Capturas de pantalla",
+    "screenshotPlaceholder": "Espacio para captura de pantalla",
+    "ecommercePlatform": {
+      "name": "Plataforma de E-Commerce",
+      "tagline": "Una tienda multi-rol construida para manejar catálogos y pedidos complejos.",
+      "overview": "Una plataforma de comercio electrónico full-stack que cubre gestión de catálogo, carrito y checkout, seguimiento de pedidos y un panel administrativo. Construida para explorar cómo un backend en TypeScript y un frontend en Angular se mantienen sincronizados cuando el modelo de datos crece más allá de un CRUD simple.",
+      "feature1": "Acceso basado en roles para clientes, vendedores y administradores",
+      "feature2": "Catálogo de productos con variantes, categorías y búsqueda/filtros",
+      "feature3": "Flujo de carrito y checkout con seguimiento del estado del pedido",
+      "feature4": "Panel administrativo para inventario y gestión de pedidos",
+      "challenge1": "Modelar variantes de producto (talla, color, existencias) sin duplicar la lógica del catálogo entre servicios",
+      "challenge2": "Mantener el estado del carrito consistente entre el estado de Angular en el cliente y la fuente de verdad en MySQL",
+      "challenge3": "Diseñar índices que mantuvieran rápida la búsqueda del catálogo a medida que crecía el número de productos",
+      "architectureDescription": "Una API REST en Node.js/TypeScript respaldada por MySQL, consumida por un frontend Angular de página única. La lógica de negocio se divide en capas de servicio para no duplicar reglas de validación y persistencia entre los módulos de catálogo, carrito y pedidos."
+    },
+    "cruiseReservationSystem": {
+      "name": "Sistema de Reservas de Cruceros",
+      "tagline": "Una plataforma de reservas para gestionar reservaciones de cruceros de principio a fin.",
+      "overview": "Un sistema de reservas para reservar camarotes de cruceros, gestionar itinerarios y manejar registros de pasajeros y pagos, construido sobre ASP.NET y SQL Server como una inmersión más profunda en diseño de backend transaccional.",
+      "feature1": "Disponibilidad de camarotes y flujo de reserva con prevención de conflictos",
+      "feature2": "Gestión de itinerarios y calendario de zarpes",
+      "feature3": "Registros de pasajeros e historial de reservas",
+      "feature4": "Seguimiento del estado de pago y reserva",
+      "challenge1": "Prevenir la doble reserva de camarotes ante solicitudes concurrentes",
+      "challenge2": "Diseñar un esquema que separe claramente itinerarios, zarpes y reservas individuales",
+      "challenge3": "Mantener consistentes y auditables las transiciones de estado de la reserva (pendiente, confirmada, cancelada)",
+      "architectureDescription": "Una API Web en ASP.NET con arquitectura por capas (controladores, servicios, repositorios) sobre SQL Server, con transacciones que protegen las operaciones críticas de reserva frente a condiciones de carrera."
+    }
+  },
+  "skills": {
+    "eyebrow": "Habilidades",
+    "title": "Caja de herramientas",
+    "learning": "Aprendiendo",
+    "categories": {
+      "languages": "Lenguajes de Programación",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de Datos",
+      "tools": "Herramientas",
+      "methodologies": "Metodologías"
+    }
+  },
+  "education": {
+    "eyebrow": "Educación",
+    "title": "Educación",
+    "expectedGraduation": "Graduación esperada",
+    "degree": {
+      "name": "Bachillerato en Ingeniería de Software"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos",
+    "description": "Ya sea por una oportunidad, una pregunta sobre un proyecto, o solo para conectar — leo cada mensaje.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntame un poco sobre la oportunidad o la pregunta.",
+    "submit": "Enviar mensaje",
+    "submitting": "Enviando...",
+    "success": "Mensaje enviado — gracias por escribir. Responderé pronto.",
+    "error": "Algo salió mal. Intenta de nuevo o escríbeme directamente.",
+    "errorRequired": "Este campo es obligatorio.",
+    "errorEmail": "Ingresa un correo electrónico válido.",
+    "directEmail": "O escríbeme directamente a"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Diseñado y desarrollado por Yohan Briceño Godoy."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o fue movida.",
+    "cta": "Volver al inicio"
+  },
+  "languages": {
+    "spanish": "Español",
+    "english": "Inglés",
+    "native": "Nativo",
+    "advanced": "Avanzado (B2+)"
+  },
+  "themeToggle": {
+    "light": "Cambiar a modo claro",
+    "dark": "Cambiar a modo oscuro"
+  },
+  "languageSwitcher": {
+    "label": "Idioma"
+  }
+}
