@@ -43,11 +43,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Payload too large" }, { status: 400 });
     }
 
-    const endpoint =
-      process.env.FORMSPREE_ENDPOINT ||
-      (process.env.FORMSPREE_FORM_ID
-        ? `https://formspree.io/f/${process.env.FORMSPREE_FORM_ID}`
-        : "");
+    const rawEndpoint = clean(process.env.FORMSPREE_ENDPOINT);
+    const rawFormId = clean(process.env.FORMSPREE_FORM_ID);
+
+    const endpoint = rawEndpoint
+      ? rawEndpoint
+      : rawFormId
+        ? rawFormId.startsWith("http://") || rawFormId.startsWith("https://")
+          ? rawFormId
+          : `https://formspree.io/f/${rawFormId}`
+        : "";
 
     if (!endpoint) {
       return NextResponse.json({ error: "Contact service is not configured" }, { status: 503 });
