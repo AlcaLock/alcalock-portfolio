@@ -43,7 +43,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Payload too large" }, { status: 400 });
     }
 
-    const endpoint = process.env.FORMSPREE_ENDPOINT;
+    const endpoint =
+      process.env.FORMSPREE_ENDPOINT ||
+      (process.env.FORMSPREE_FORM_ID
+        ? `https://formspree.io/f/${process.env.FORMSPREE_FORM_ID}`
+        : "");
+
     if (!endpoint) {
       return NextResponse.json({ error: "Contact service is not configured" }, { status: 503 });
     }
