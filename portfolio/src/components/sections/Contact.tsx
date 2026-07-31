@@ -36,7 +36,8 @@ export function Contact() {
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const nextErrors = validate(formData);
     setErrors(nextErrors);
 
@@ -59,11 +60,18 @@ export function Contact() {
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) throw new Error("Contact submit failed");
+      const result = (await response.json().catch(() => ({}))) as {
+        ok?: boolean;
+        error?: string;
+      };
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error ?? "Contact submit failed");
+      }
 
       setStatus("success");
       setErrors({});
-      e.currentTarget.reset();
+      form.reset();
     } catch {
       setStatus("error");
     }
