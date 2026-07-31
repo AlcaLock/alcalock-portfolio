@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { profile } from "@/data/profile";
 
 type Status = "idle" | "submitting" | "success" | "error";
-type Errors = Partial<Record<"name" | "email" | "message", string>>;
+type Errors = Partial<Record<"name" | "email" | "subject" | "message", string>>;
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -21,12 +21,14 @@ export function Contact() {
   function validate(formData: FormData): Errors {
     const name = String(formData.get("name") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
+    const subject = String(formData.get("subject") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
     const next: Errors = {};
 
     if (!name) next.name = t("errorRequired");
     if (!email) next.email = t("errorRequired");
     else if (!emailPattern.test(email)) next.email = t("errorEmail");
+    if (!subject) next.subject = t("errorRequired");
     if (!message) next.message = t("errorRequired");
 
     return next;
@@ -42,9 +44,25 @@ export function Contact() {
 
     setStatus("submitting");
     try {
-      // Replace with a real endpoint (e.g. Formspree, Resend, an API route).
-      await new Promise((resolve) => setTimeout(resolve, 900));
+      const payload = {
+        name: String(formData.get("name") ?? "").trim(),
+        email: String(formData.get("email") ?? "").trim(),
+        company: String(formData.get("company") ?? "").trim(),
+        subject: String(formData.get("subject") ?? "").trim(),
+        message: String(formData.get("message") ?? "").trim(),
+        website: String(formData.get("website") ?? "").trim(),
+      };
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) throw new Error("Contact submit failed");
+
       setStatus("success");
+      setErrors({});
       e.currentTarget.reset();
     } catch {
       setStatus("error");
@@ -70,6 +88,16 @@ export function Contact() {
 
           <Card className="p-6 md:p-8">
             <form onSubmit={onSubmit} noValidate className="space-y-5">
+              {/* Honeypot field for basic bot filtering. */}
+              <input
+                tabIndex={-1}
+                autoComplete="off"
+                name="website"
+                type="text"
+                className="hidden"
+                aria-hidden="true"
+              />
+
               <div>
                 <label htmlFor="name" className="text-sm font-medium text-ink">
                   {t("nameLabel")}
@@ -101,6 +129,36 @@ export function Contact() {
                 />
                 {errors.email && (
                   <p className="mt-1.5 text-xs text-amber">{errors.email}</p>
+                )}
+              </div>
+
+              <div>
+                <label htmlFor="company" className="text-sm font-medium text-ink">
+                  {t("companyLabel")}
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  placeholder={t("companyPlaceholder")}
+                  className="mt-2 w-full rounded-md border border-border bg-canvas px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted/60 focus-visible:border-signal"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="text-sm font-medium text-ink">
+                  {t("subjectLabel")}
+                </label>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder={t("subjectPlaceholder")}
+                  aria-invalid={Boolean(errors.subject)}
+                  className="mt-2 w-full rounded-md border border-border bg-canvas px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted/60 focus-visible:border-signal"
+                />
+                {errors.subject && (
+                  <p className="mt-1.5 text-xs text-amber">{errors.subject}</p>
                 )}
               </div>
 

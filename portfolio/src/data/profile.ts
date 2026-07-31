@@ -10,9 +10,9 @@ export const profile: Profile = {
   location: "Alajuela, Costa Rica",
   resumeUrl: "/resume.pdf",
   social: {
-    github: "https://github.com/replace-me",
+    github: "https://github.com/AlcaLock",
     linkedin: "https://www.linkedin.com/in/yohan-briceño-godoy-452b5435b",
-    email: "panatur256@gmail.com",
+    email: "yohanbriceno256@gmail.com",
   },
   languages: [
     { key: "spanish", levelKey: "native" },
